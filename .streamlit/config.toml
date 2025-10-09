@@ -1,0 +1,15 @@
+[theme]
+base="light"
+
+[server]
+headless = true
+
+[browser]
+gatherUsageStats = false
+
+[client]
+showErrorDetails = true
+
+[ui]
+hideTopBar = true
+hideFooter = true
