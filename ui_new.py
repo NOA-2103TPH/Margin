@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import os
 from pathlib import Path
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 from io import BytesIO
 
 
@@ -73,7 +73,8 @@ if "Thời gian cập nhật" in df.columns:
     update_time = df["Thời gian cập nhật"].dropna().iloc[0] if not df["Thời gian cập nhật"].dropna().empty else None
 
 if not update_time:
-    update_time = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
+    VN_TZ = timezone(timedelta(hours=7))
+    update_time = datetime.now(VN_TZ).strftime("%d/%m/%Y %H:%M:%S")
 
 st.markdown(f"**Cập nhật lần cuối:** {update_time}")
 
