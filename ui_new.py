@@ -44,7 +44,7 @@ tickers = [x.strip().upper() for x in search_input.replace(" ", ",").split(",") 
 
 
 # --- Bộ lọc theo Model ---
-model_filter = st.selectbox("Chọn mô hình:", ["Tất cả", "Ngân hàng", "Phi tài chính", "Chứng khoán"])
+model_filter = st.selectbox("Chọn mô hình:", ["Tất cả", "Ngân hàng", "Phi tài chính", "Chứng khoán", "Bảo hiểm"])
 
 # --- Bộ lọc theo Grade ---
 grade_filter = st.multiselect("Chọn điểm:", options=sorted(df["Điểm"].unique()))
