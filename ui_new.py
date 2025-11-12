@@ -15,7 +15,7 @@ st.set_page_config(
 
 
 # --- Load dữ liệu ---
-file_path = os.path.join("result", "summary.xlsx")
+file_path = os.path.join("result", "summary 1.xlsx")
 
 @st.cache_data
 def load_data():
